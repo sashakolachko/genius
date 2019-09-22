@@ -14,7 +14,7 @@
 </template>
 
 <script>
-import Song from './Song.vue';
+import Song from './song/Song.vue';
 export default {
   name: 'SearchSongs',
   components: {
@@ -27,8 +27,7 @@ export default {
     songs() {
       return this.$store.state.searchedSongs;
     }
-  },
-  mounted() {}
+  }
 }
 </script>
 

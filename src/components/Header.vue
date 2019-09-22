@@ -38,7 +38,6 @@ export default {
         axios.get(`https://api.genius.com/search?q=${this.searchWord}&access_token=${this.$store.state.accessToken}`)
           .then(response => {
             this.$store.commit('setsearchedSongs', response.data.response.hits);
-            console.log(this.$store.state.searchedSongs);
           });
         if (this.$router.currentRoute.fullPath != '/songs') {
           this.$router.push('/songs');
